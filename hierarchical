@@ -1,0 +1,50 @@
+package Inheritance;
+class Car{
+	void commonFeatures() {
+        System.out.println("All cars have engine, wheels, and steering.");
+	}
+}
+class honda extends Car
+{
+	void hondaFeatures() {
+        System.out.println("Honda: Reliable, Fuel Efficient, Affordable.");
+	}
+}
+class bmw extends Car
+{
+	void bmwFeatures() {
+        System.out.println("BMW: Luxury, Performance, Advanced Technology.");
+	}
+}
+class Skoda extends Car
+{
+	void skodaFeatures() {
+        System.out.println("Skoda: European Design, Value for Money, Spacious.");
+    }
+}
+public class Inherit {
+
+	public static void main(String[] args) {
+		honda h = new honda();
+        System.out.println("Honda Car Features:");
+        h.commonFeatures();
+        h.hondaFeatures();
+
+        System.out.println();
+
+        
+        bmw b = new bmw();
+        System.out.println("BMW Car Features:");
+        b.commonFeatures();
+        b.bmwFeatures();
+
+        System.out.println();
+
+        
+        Skoda s = new Skoda();
+        System.out.println("Skoda Car Features:");
+        s.commonFeatures();
+        s.skodaFeatures();
+    }
+
+}

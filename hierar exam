@@ -1,0 +1,59 @@
+package Inheritance;
+class Exam {
+    int marks;
+
+    void setMarks(int m) {
+        marks = m;
+    }
+
+    int getMarks() {
+        return marks;
+    }
+}
+
+class Maths extends Exam {
+    void printMaths() {
+        System.out.println("Maths Marks: " + getMarks());
+    }
+}
+
+class English extends Exam {
+    void printEnglish() {
+        System.out.println("English Marks: " + getMarks());
+    }
+}
+
+class JavaSubject extends Exam {
+    void printJava() {
+        System.out.println("Java Marks: " + getMarks());
+    }
+}
+
+
+class Total {
+    int totalMarks;
+
+    void printTotal(int m, int e, int j) {
+        totalMarks = m + e + j;
+        System.out.println("Total Marks: " + totalMarks);
+    }
+}
+
+public class hierar {
+    public static void main(String[] args) {
+        Maths maths = new Maths();
+        English english = new English();
+        JavaSubject java = new JavaSubject();
+
+        maths.setMarks(90);
+        english.setMarks(85);
+        java.setMarks(95);
+
+        maths.printMaths();
+        english.printEnglish();
+        java.printJava();
+
+        Total total = new Total();
+        total.printTotal(maths.getMarks(), english.getMarks(), java.getMarks());
+    }
+}

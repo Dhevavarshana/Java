@@ -1,0 +1,18 @@
+package Inheritance;
+class college{
+	int num_stu;
+}
+class cce extends college{
+	void display() {
+		System.out.println("Student number ="+num_stu);
+	}
+}
+public class single {
+
+	public static void main(String[] args) {
+		cce obj=new cce();
+		obj.num_stu=1500;
+		obj.display();
+	}
+
+}
